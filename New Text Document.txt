@@ -1,0 +1,138 @@
+pwd #present workind directory
+ls #list content
+cd xyz/ #change directory
+
+git config --global user.name "Ibrahim"
+git config --global user.email "sbz77777@gmail.com"
+
+git config --list
+
+git config --global core.editor emacs
+git config --global core.editor vim
+
+git config user.name
+git config user.email
+
+git status
+
+git init
+
+git add --a or git add .
+
+git commit -m ""
+
+git log
+git log -p
+git log -p -3
+git log --stat
+git log --pretty=oneline
+git log --short
+git log --full
+git log --since=2.days
+git log --pretty=format:"%h -- %an"
+
+https://git-scm.com/docs/git-log
+
+git add abc.txt or anything
+
+rm -rf .git #Used to delete your current git repository. [Deadly Command, think before used]
+
+git clone https://abc.com . in the form of HTTP> 
+PS: If you want to change the name of your cloned repository from shell?
+then type "git clone <URL of your Repo. in the form of HTTP> <your file name>"
+
+touch error.log (error.log is an example) #create a file
+
+.GITIGNORE
+*.log #ignore all log files
+dr/ #ignore all dr folders
+/dr/ #ignore only outer dr folder
+
+git diff #ye apka stagging area ko working directory se compare karta hai
+git diff --staged #ye apke pichle commit ko apke abhi k staging area se compare karta hai
+
+git commit -a -m "Direct Commit" #Skipping The Staging Area
+
+git rm third.txt #remove file
+git mv first.txt first_renamed.txt #rename file
+
+git rm --cached db.accdb #untracked the file
+
+git commit --amend #To do modifications in previous commit message
+VIM EDITOR:
+i = edit
+esp + : = niche type karne k liye
+wq = to close vim editor
+
+git restore --staged <filename> #To make file unstaged from staged
+git checkout -- <filename> #To make File restore/unmodify to previous commit
+git checkout -f #To make all File restore/unmodify to previous commit
+
+git remote
+git remote add origin https://github.com/SyedIbrahim7/GitTutorial.git
+git remote -v
+
+git push -u origin master
+ssh-keygen -t rsa -b 4096 -C "sbz77777@gmail.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+tail ~/.ssh/id_rsa.pub
+$ git push -u origin master
+
+ALIAS:
+git config --global alias.st status
+git config --global alias.ci commit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           select hunks interactively
+    -e, --edit            edit current diff and apply
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    --renormalize         renormalize EOL of tracked files (implies -u)
+    -N, --intent-to-add   record only the fact that the path will be added later
+    -A, --all             add changes from all tracked and untracked files
+    --ignore-removal      ignore paths removed in the working tree (same as --no-all)
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of errors
+    --ignore-missing      check if - even missing - files are ignored in dry run
+    --sparse              allow updating entries outside of the sparse-checkout cone
+    --chmod (+|-)x        override the executable bit of the listed files
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
