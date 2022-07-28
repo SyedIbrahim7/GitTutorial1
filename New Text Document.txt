@@ -77,21 +77,27 @@ ssh-keygen -t rsa -b 4096 -C "sbz77777@gmail.com"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 tail ~/.ssh/id_rsa.pub
-$ git push -u origin master
+git push -u origin master
 
 ALIAS:
 git config --global alias.st status
 git config --global alias.ci commit
 
+git restore <file> #to discard chnged in working directory
 
+BRANCHING:To avoid changes in master branch, people create branches and work in that branch
+git checkout -b <new-branch-name> #To create new branch
+git checkout <branch-name> #To switch into different branch,commit
+git branch #To check all the branches in git 
 
+git merge <branch name to be merge> #To merge branch, switch to parent branch
+*note :  VS CODE gives option to select and resolve merge conflicts *
 
-
-
-
-
-
-
+git branch -v #To check all branches with their last commit hash code and message
+git branch --merged #To check which branch are merged
+git branch --no-merged #To check which branch are not merged
+git branch -d <branch-name> #To deilete branch
+git branch -D <branch-name> #To delete unmerged branch
 
 
 
